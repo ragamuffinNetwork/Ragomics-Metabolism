@@ -1,0 +1,27 @@
+{
+  "args": [
+    {
+      "name": "pathway",
+      "render_type": "str-list-input",
+      "optional": false,
+      "value_type": "str-list",
+      "description": "Pathway name for defining node colors by its activity score",
+      "default_value": null,
+      "options": null
+    },
+    {
+      "name": "database",
+      "render_type": "str-options",
+      "options": ["KEGG", "GOBP", "REACTOME"],
+      "optional": false,
+      "default_value": "GOBP",
+      "description": "Database for gene set enrichment analysis"
+    }
+  ],
+  "description": "Calculate pathway activity by decoupler.",
+  "tag": "pathway",
+  "document_url": "https://decoupler-py.readthedocs.io/en/latest/notebooks/progeny.html",
+  "program_language": "Python",
+  "source": null,
+  "preset_env": "ragene-py-sc-env"
+}

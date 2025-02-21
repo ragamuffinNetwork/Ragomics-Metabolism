@@ -1,0 +1,103 @@
+{
+  "args": [
+    {
+      "name": "database",
+      "render_type": "str-options",
+      "options": ["CellChat", "CellPhoneDB_v4.0"],
+      "optional": false,
+      "default_value": "CellChat",
+      "description": "Database for ligand-receptor analysis"
+    },
+    {
+      "name": "species",
+      "render_type": "str-options",
+      "options": ["mouse", "human"],
+      "optional": false,
+      "default_value": "human",
+      "description": "The species of the ligand-receptor pairs"
+    },
+    {
+      "name": "signaling_type",
+      "render_type": "str-options",
+      "options": ["Secreted Signaling", "Cell-Cell Contact", "ECM-Receptor"],
+      "optional": false,
+      "default_value": "human",
+      "description": "The type of signaling. Choose from `Secreted Signaling`, `Cell-Cell Contact`, and `ECM-Receptor` for CellChatDB or `Secreted Signaling` and `Cell-Cell Contact` for CellPhoneDB_v4.0. If None, all pairs in the database are returned"
+    },
+    {
+      "name": "plot_method",
+      "render_type": "str-options",
+      "options": ["cell", "grid", "steam"],
+      "optional": false,
+      "default_value": "grid",
+      "description": "`cell` plot vectors on individual cells. `grid` plot interpolated vectors on regular grids. `stream` streamline plot"
+    },
+    {
+      "name": "background",
+      "render_type": "str-options",
+      "options": ["summary", "image", "cluster"],
+      "optional": false,
+      "default_value": "image",
+      "description": "scatter plot with color as background"
+    },
+    {
+      "name": "clustering",
+      "render_type": "adata-obs-key",
+      "optional": true,
+      "value_type": "str",
+      "default_value": null,
+      "description": "The key for clustering result. Needed if background is set to cluster."
+    },
+    {
+      "name": "ndsize",
+      "render_type": "float-input",
+      "optional": false,
+      "value_type": "float",
+      "description": " The node size of the spots.",
+      "default_value": 100,
+      "options": null
+    },
+    {
+      "name": "scale",
+      "render_type": "float-input",
+      "optional": false,
+      "value_type": "float",
+      "description": " The scale parameter passed to the matplotlib quiver function.",
+      "default_value": 0.00001,
+      "options": null
+    },
+    {
+      "name": "normalize_v",
+      "render_type": "bool-input",
+      "optional": true,
+      "value_type": "bool",
+      "description": "Whether the normalize the vector field to uniform lengths to highlight the directions without showing magnitudes.",
+      "default_value": true,
+      "options": null
+    },
+    {
+      "name": "normalize_v_quantile",
+      "render_type": "float-input",
+      "optional": false,
+      "value_type": "float",
+      "description": " The vector length quantile to use to normalize the vector field.",
+      "default_value": 0.95,
+      "options": null
+    },
+    {
+      "name": "grid_density",
+      "render_type": "float-input",
+      "optional": false,
+      "value_type": "float",
+      "description": " The density of grid.",
+      "default_value": 0.5,
+      "options": null
+    }
+  ],
+  "description": "Screening cell-cell communication in spatial transcriptomics via `commot`.",
+  "tag": "Spatial",
+  "document_url": "https://commot.readthedocs.io/en/latest/index.html",
+  "program_language": "Python",
+  "source": null,
+  "preset_env": "ragene-py-sc-env"
+}

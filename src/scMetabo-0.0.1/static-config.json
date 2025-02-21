@@ -1,0 +1,37 @@
+{
+   "args": [
+     {
+       "name": "pathway_name",
+       "render_type": "str-input",
+       "optional": false,
+       "value_type": "str",
+       "description": "Input metabolism-related pathways for analysis at single cell level.",
+       "default_value": null,
+       "options": null
+     },
+     {
+       "name": "method",
+       "render_type": "str-options",
+       "optional": true,
+       "value_type": "str",
+       "description": "Select which method for metabolism-related pathway activity analysis. ORA: Over Representation Analysis",
+       "default_value": "aucell",
+       "options": ["gsea", "gsva", "aucell", "ora"]
+     },
+     {
+       "name": "metabo_database",
+       "render_type": "str-options",
+       "optional": true,
+       "value_type": "str",
+       "description": "Get metabolism-related database for analysis",
+       "default_value": "kegg_pathways",
+       "options": ["kegg_pathways", "reactome_pathways"]
+     }
+   ],
+   "description": "scMetabolism is a metabolism-driven toolkit for quantifying metabolism activity at the single-cell resolution",
+   "tag": "scMetabolism",
+   "document_url": null,
+   "source": null,
+   "preset_env": "ragene-py-sc-env"
+ }
+ 
